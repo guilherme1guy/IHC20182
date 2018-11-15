@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}BeatClan{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="IHC">
+
+    <!--Icons-->
+    <!--<link rel="icon" href="{% static 'core/images/favicon.ico' %}">-->
+    <!--<link rel="shortcut icon" href="{% static 'core/images/favicon.ico' %}">-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    {% block bootstrap %}
+
+      <!-- CSS  -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+      <!-- JS-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <!-- Custom fonts for this template -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    {% endblock bootstrap%}
+
+    {% block css %}
+      <!-- Custom CSS-->
+      <link href="{% static 'core/css/core.css' %}" rel="stylesheet">
+    {% endblock css %}
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    {% block navbar %}
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <img src="{% static 'core/img/BC.png' %}" width="40px" alt="">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <ul class="navbar-nav mr-auto ml-5">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="#">Músicas <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+
+        <i class="fas fa-step-backward" style="color:white"></i>
+        <a id="play-icon" href="javascript:void(0)" rel="me">
+          <i class="icon fas fa-play mb-1 ml-4"></i>
+        </a>
+        <i class="icon fas fa-step-forward" ></i>
+
+
+        <div class="audio-player">
+          <div class="audio-wrapper" id="player-container" href="javascript:;">
+            <audio id="player" ontimeupdate="initProgressBar()">
+              <source src="http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav" type="audio/mp3">
+            </audio>
+          </div>
+          <div class="player-bar">
+            <span id="seekObjContainer">
+              <progress id="seekObj" value="0" max="1"></progress>
+            </span>
+            <br>
+            <!--<small style="float: left; position: relative; left: 15px;" class="start-time"></small>-->
+            <!--<small style="float: right; position: relative; right: 20px;" class="end-time"></small>-->
+          </div>
+        </div>
+
+        <i class="icon fas fa-chevron-down mr-5"></i>
+
+        <i class="icon fas fa-search"></i>
+        <i class="icon fas fa-bell"></i>
+        <i class="icon fas fa-user-circle"></i>
+
+      </nav>
+    {% endblock navbar %}
+
+
+    <!-- Page Content -->
+    <wrapper class="d-flex flex-column">
+
+      <!-- Content -->
+      <div class="flex-fill out-sidebar-content">
+        {% block content %}
+        {% endblock content %}
+      </div>
+
+      <!-- Footer -->
+      <div class="copyright py-4 text-center text-white">
+        <div class="container">
+          <small>Copyright &copy; BeatClan 2018</small>
+        </div>
+      </div>
+    </wrapper>
+    </div>
+
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    {% block js %}
+     <script type="text/javascript" src="{% static 'core/js/player.js' %}"></script>
+    {%  endblock js %}
+
+  </body>
+</html>

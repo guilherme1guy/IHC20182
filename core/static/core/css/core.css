@@ -1,0 +1,29 @@
+.icon {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.audio-player {
+  margin-bottom: 5px;
+  width: 40%;
+}
+
+
+progress {
+  background-color: grey;
+  height: 6px;
+  width: 100%;
+  border:none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: red;
+
+}
+progress::-webkit-progress-value {
+
+}
+progress::-moz-progress-bar {
+   background-color: red;
+}
