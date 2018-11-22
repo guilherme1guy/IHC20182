@@ -1,14 +1,43 @@
-.icon {
-    color: white;
-    margin-left: 10px;
-    margin-right: 10px;
+/* Navbar */
+.navbar {
+    background-color: #333333;
 }
 
+/* Links */
+a {
+  color: #b2b2b2 !important;
+}
+
+a:hover {
+  color: white !important;
+}
+
+.selected {
+  color: white !important;
+  background-color: black;
+}
+
+/* Color Themes */
+.primary-color {
+  color: black;
+}
+
+.secondary-color {
+  color: #333333;
+}
+
+/* Icons */
+i {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Player */
 .audio-player {
   margin-bottom: 5px;
   width: 40%;
 }
-
 
 progress {
   background-color: grey;
@@ -21,9 +50,13 @@ progress::-webkit-progress-bar {
   background-color: red;
 
 }
+
 progress::-webkit-progress-value {
 
 }
+
 progress::-moz-progress-bar {
    background-color: red;
 }
+
+/*  */

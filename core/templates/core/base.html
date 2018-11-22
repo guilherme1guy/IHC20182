@@ -44,30 +44,26 @@
 
     <!-- Navigation -->
     {% block navbar %}
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg primary-color">
 
         <img src="{% static 'core/img/BC.png' %}" width="40px" alt="">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link ml-5 selected" href="#">Feed</a>
+            <a class="nav-item nav-link ml-4" href="#">Músicas</a>
+          </div>
+        </div>
 
-        <ul class="navbar-nav mr-auto ml-5">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-              <a class="nav-link" href="#">Músicas <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-
-
-        <i class="fas fa-step-backward" style="color:white"></i>
+        <i class="fas fa-step-backward"></i>
         <a id="play-icon" href="javascript:void(0)" rel="me">
-          <i class="icon fas fa-play mb-1 ml-4"></i>
+          <i class="fas fa-play mb-1 ml-4"></i>
         </a>
-        <i class="icon fas fa-step-forward" ></i>
+        <i class="fas fa-step-forward" ></i>
 
 
         <div class="audio-player">
@@ -86,11 +82,11 @@
           </div>
         </div>
 
-        <i class="icon fas fa-chevron-down mr-5"></i>
+        <i class=" fas fa-chevron-down mr-5"></i>
 
-        <i class="icon fas fa-search"></i>
-        <i class="icon fas fa-bell"></i>
-        <i class="icon fas fa-user-circle"></i>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-bell"></i>
+        <i class="fas fa-user-circle"></i>
 
       </nav>
     {% endblock navbar %}
