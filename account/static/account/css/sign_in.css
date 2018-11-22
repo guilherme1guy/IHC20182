@@ -1,0 +1,76 @@
+/* Navbar */
+
+/* Links */
+a {
+  color: #ffffff !important;
+}
+
+a:hover {
+  color: red !important;
+}
+
+.selected {
+  color: white !important;
+  background-color: black;
+}
+
+/* Color Themes */
+.primary-color {
+  color: black;
+}
+
+.secondary-color {
+  color: #333333;
+}
+
+/* Icons */
+i {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Player */
+.audio-player {
+  margin-bottom: 5px;
+  width: 40%;
+}
+
+progress {
+  background-color: grey;
+  height: 6px;
+  width: 100%;
+  border:none;
+}
+
+body{
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/show.jpg');
+  background-repeat: no-repeat;
+  background-position: 30% 45%;
+  background-size: cover;
+}
+
+.login{
+  margin-top: 100px;
+  margin-left: 1250px;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+progress::-webkit-progress-bar {
+  background-color: red;
+
+}
+
+progress::-webkit-progress-value {
+
+}
+
+progress::-moz-progress-bar {
+   background-color: red;
+}
+
+/*  */
