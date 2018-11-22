@@ -43,48 +43,48 @@
   <body id="page-top">
 
     <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg primary-color">
+    <nav class="navbar navbar-expand-lg primary-color">
 
-        <img src="{% static 'core/img/BC.png' %}" width="40px" alt="">
+      <img src="{% static 'core/img/BC.png' %}" width="40px" alt="">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        {% block navbar %}
+      {% block navbar %}
 
-        {% endblock navbar %}
+      {% endblock navbar %}
 
-        <i class="fas fa-step-backward"></i>
-        <a id="play-icon" href="javascript:void(0)" rel="me">
-          <i class="fas fa-play mb-1 ml-4"></i>
-        </a>
-        <i class="fas fa-step-forward" ></i>
+      <i class="fas fa-step-backward"></i>
+      <a id="play-icon" href="javascript:void(0)" rel="me">
+        <i class="fas fa-play mb-1 ml-4"></i>
+      </a>
+      <i class="fas fa-step-forward" ></i>
 
 
-        <div class="audio-player">
-          <div class="audio-wrapper" id="player-container" href="javascript:;">
-            <audio id="player" ontimeupdate="initProgressBar()">
-              <source src="http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav" type="audio/mp3">
-            </audio>
-          </div>
-          <div class="player-bar">
-            <span id="seekObjContainer">
-              <progress id="seekObj" value="0" max="1"></progress>
-            </span>
-            <br>
-            <!--<small style="float: left; position: relative; left: 15px;" class="start-time"></small>-->
-            <!--<small style="float: right; position: relative; right: 20px;" class="end-time"></small>-->
-          </div>
+      <div class="audio-player">
+        <div class="audio-wrapper" id="player-container" href="javascript:;">
+          <audio id="player" ontimeupdate="initProgressBar()">
+            <source src="http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav" type="audio/mp3">
+          </audio>
         </div>
+        <div class="player-bar">
+          <span id="seekObjContainer">
+            <progress id="seekObj" value="0" max="1"></progress>
+          </span>
+          <br>
+          <!--<small style="float: left; position: relative; left: 15px;" class="start-time"></small>-->
+          <!--<small style="float: right; position: relative; right: 20px;" class="end-time"></small>-->
+        </div>
+      </div>
 
-        <i class=" fas fa-chevron-down mr-5"></i>
+      <i class=" fas fa-chevron-down mr-5"></i>
 
-        <i class="fas fa-search"></i>
-        <i class="fas fa-bell"></i>
-        <i class="fas fa-user-circle"></i>
+      <i class="fas fa-search"></i>
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-user-circle"></i>
 
-      </nav>
+    </nav>
 
 
     <!-- Page Content -->
@@ -104,8 +104,6 @@
       </div>
     </wrapper>
     </div>
-
-
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-to-top d-lg-none position-fixed ">
