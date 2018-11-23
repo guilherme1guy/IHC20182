@@ -5,3 +5,6 @@ class SignInView(TemplateView):
 
 class SignUpView(TemplateView):
     template_name = "account/sign_up.html"
+
+class HelpPage(TemplateView):
+    template_name = "account/help_page.html"
