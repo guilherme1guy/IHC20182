@@ -8,3 +8,6 @@ class SignUpView(TemplateView):
 
 class HelpPage(TemplateView):
     template_name = "account/help_page.html"
+
+class InstructionPage(TemplateView):
+    template_name = "account/instruction_page.html"
