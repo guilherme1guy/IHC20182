@@ -1,11 +1,24 @@
+body {
+  background: linear-gradient(to top, #333333 0%, black 100%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 /* Navbar */
 .navbar {
-    background-color: #333333;
+  background-color: #333333;
+  height: 55px;
 }
 
 /* Links */
 a {
   color: #b2b2b2 !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  width: 100px !important;
+  text-align: center !important;
 }
 
 a:hover {
