@@ -85,4 +85,13 @@ h3 {
   margin-top:1px;
 }
 
+.page-switch a {
+  color: #b2b2b2 !important
+}
+
+.page-switch .current{
+  color: white !important;
+}
+
+
 

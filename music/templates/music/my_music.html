@@ -16,9 +16,12 @@
 
 {% block content %}
 
-  <div class="mt-5">
-    <h3>Novidades</h3>
+  <div class="mt-3 mr-5 float-right page-switch">
+    <a href="{% url 'music:discover'%}" class="mr-3">Minhas Músicas</a>
+    <a href="{% url 'music:discover'%}" class="mr-1 current">Descobrir</a>
   </div>
+
+  <h3 class="mt-5">Novidades</h3>
 
   <div class="container">
     <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
