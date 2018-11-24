@@ -8,6 +8,7 @@
 
 .card-img-top {
   width: 140px !important;
+  margin-top: 15px;
 }
 
 .carousel-control-prev,
@@ -27,4 +28,29 @@
 
 .album-item {
   margin-right: 37px;
+}
+
+.play-button{
+  position: absolute;
+  top: 30%;
+  left: 32%;
+  display: none;
+}
+
+.album-item:hover .play-button{
+  display:block;
+}
+
+.album-item:hover .card-img-top{
+  opacity: 0.6;
+}
+
+.album-info {
+  color: white;
+  font-size: 10px;
+}
+
+h3 {
+ color: white;
+ margin-left: 30px;
 }

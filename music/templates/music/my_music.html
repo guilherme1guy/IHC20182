@@ -16,6 +16,10 @@
 
 {% block content %}
 
+  <div class="mt-5">
+    <h3>Novidades</h3>
+  </div>
+
   <div class="container">
     <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
       <!-- The slideshow -->
@@ -51,6 +55,8 @@
 
     </div>
   </div>
+
+  <h3>O que seus amigos estão curtindo</h3>
 
   <div class="container">
     <div id="demo2" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -88,6 +94,8 @@
     </div>
   </div>
 
+  <h3>O que seus seguidores estão curtindo </h3>
+
   <div class="container">
     <div id="demo3" class="carousel slide" data-ride="carousel" data-interval="false">
       <!-- The slideshow -->
@@ -123,7 +131,3 @@
     </div>
   </div>
 {% endblock content%}
-
-{% block js %}
-  <script type="text/javascript" src="{% static 'music/js/carousel.js' %}"></script>
-{%  endblock js %}
