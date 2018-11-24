@@ -26,7 +26,7 @@
   margin-top: 40px;
 }
 
-.album-item {
+#album{
   margin-right: 37px;
 }
 
@@ -54,3 +54,35 @@ h3 {
  color: white;
  margin-left: 30px;
 }
+
+.add{
+  position: absolute;
+  top: 0%;
+  left: 80%;
+}
+
+.details {
+  position: absolute;
+  top: 12%;
+  left: 80%;
+}
+
+.add span,
+.details span {
+  float: left;
+  font-size:12px;
+  display: none;
+  color: white;
+  padding-bottom:2px;
+}
+.add:hover span,
+.details:hover span{
+  display:block;
+}
+
+.add i,
+.details i{
+  margin-top:1px;
+}
+
+

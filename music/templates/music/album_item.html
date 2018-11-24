@@ -1,7 +1,22 @@
-<div class="col-xs-2 col-sm-2 col-md-2 float-left album-item">
-  <a class="album-img" href="#" onclick=abc(this) class="slider_info">
-    <img class="img-fluid card-img-top" src={{image}}>
-    <i class="fas fa-play fa-3x play-button"></i>
-  </a>
-  <div class="album-info"> Lemonade <br> Beyoncé </div>
+<div id="album" class="col-xs-2 col-sm-2 col-md-2 float-left">
+
+  <div class="album-item">
+    <a class="album-img" href="#" onclick=abc(this) class="slider_info">
+      <img class="img-fluid card-img-top" src={{image}}>
+      <i class="fas fa-play fa-3x play-button"></i>
+    </a>
+    <div class="album-info"> Lemonade <br> Beyoncé </div>
+  </div>
+
+  <div id="album-options" class="float-right">
+    <a class="add" href="{% url 'music:my_music' %}">
+      <i class="fas fa-plus-circle float-left mr-1"></i>
+      <span>Adicionar</span>
+    </a>
+    <a class="details" href="">
+      <i class="fas fa-external-link-square-alt float-left mr-1"></i>
+      <span>Detalhes</span>
+    </a>
+  </div>
+
 </div>
