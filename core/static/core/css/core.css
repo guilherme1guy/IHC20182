@@ -61,7 +61,6 @@ progress {
 
 progress::-webkit-progress-bar {
   background-color: red;
-
 }
 
 progress::-webkit-progress-value {
@@ -69,7 +68,7 @@ progress::-webkit-progress-value {
 }
 
 progress::-moz-progress-bar {
-   background-color: red;
+  background-color: red;
 }
 
 /*  */

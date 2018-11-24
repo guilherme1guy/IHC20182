@@ -17,11 +17,11 @@
 {% block content %}
 
   <div class="mt-3 mr-5 float-right page-switch">
-        <a href="{% url 'music:discover'%}" class="mr-3">Descobrir</a>
-    <a href="{% url 'music:my_music'%}" class="mr-1 current">Minhas Músicas</a>
+    <a href="{% url 'music:discover'%}" class="mr-3 current">Descobrir</a>
+    <a href="{% url 'music:my_music'%}" class="mr-1">Minhas Músicas</a>
   </div>
 
-  <h3 class="mt-5">Meus Álbuns</h3>
+  <h3 class="mt-5">Novidades</h3>
 
   <div class="container">
     <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -29,14 +29,6 @@
       <div class="carousel-inner no-padding my-5">
 
         <div class="carousel-item active">
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png" %}
-          {% include "music/album_item.html" with image="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg" %}
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Shawn_Mendes_album.jpg/220px-Shawn_Mendes_album.jpg" %}
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ariana_Grande_My_Everything_2014_album_artwork.png/220px-Ariana_Grande_My_Everything_2014_album_artwork.png" %}
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Halsey_-_Badlands.png/220px-Halsey_-_Badlands.png" %}
-        </div>
-
-        <div class="carousel-item">
           {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/c/c3/1989_de_Taylor_Swift.jpg/220px-1989_de_Taylor_Swift.jpg"%}
           {% include "music/album_item.html" with image="https://images.genius.com/565381daa3a7d73a551d9738732b26d5.1000x1000x1.jpg" %}
           {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png/220px-Beyonce_-_Lemonade_%28Official_Album_Cover%29.png" %}
@@ -44,6 +36,14 @@
           {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/DNCE_-_SWAAY_%28Album_Cover%29.png/220px-DNCE_-_SWAAY_%28Album_Cover%29.png"%}
         </div>
 
+        <div class="carousel-item">
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png" %}
+          {% include "music/album_item.html" with image="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Shawn_Mendes_album.jpg/220px-Shawn_Mendes_album.jpg" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ariana_Grande_My_Everything_2014_album_artwork.png/220px-Ariana_Grande_My_Everything_2014_album_artwork.png" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Halsey_-_Badlands.png/220px-Halsey_-_Badlands.png" %}
+
+        </div>
       </div>
 
       <!-- Left and right controls -->
@@ -59,22 +59,14 @@
     </div>
   </div>
 
-  <h3>Minhas músicas</h3>
+  <h3>O que seus amigos estão curtindo</h3>
 
   <div class="container">
     <div id="demo2" class="carousel slide" data-ride="carousel" data-interval="false">
       <!-- The slideshow -->
       <div class="carousel-inner no-padding my-5">
 
-        <div class="carousel-item">
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png" %}
-          {% include "music/album_item.html" with image="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg" %}
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Shawn_Mendes_album.jpg/220px-Shawn_Mendes_album.jpg" %}
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ariana_Grande_My_Everything_2014_album_artwork.png/220px-Ariana_Grande_My_Everything_2014_album_artwork.png" %}
-          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Halsey_-_Badlands.png/220px-Halsey_-_Badlands.png" %}
-        </div>
-
-        <div class="carousel-item active">
+        <div class="carousel-item ">
           {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/c/c3/1989_de_Taylor_Swift.jpg/220px-1989_de_Taylor_Swift.jpg"%}
           {% include "music/album_item.html" with image="https://images.genius.com/565381daa3a7d73a551d9738732b26d5.1000x1000x1.jpg" %}
           {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png/220px-Beyonce_-_Lemonade_%28Official_Album_Cover%29.png" %}
@@ -82,6 +74,14 @@
           {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/DNCE_-_SWAAY_%28Album_Cover%29.png/220px-DNCE_-_SWAAY_%28Album_Cover%29.png"%}
         </div>
 
+        <div class="carousel-item active">
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png" %}
+          {% include "music/album_item.html" with image="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Shawn_Mendes_album.jpg/220px-Shawn_Mendes_album.jpg" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ariana_Grande_My_Everything_2014_album_artwork.png/220px-Ariana_Grande_My_Everything_2014_album_artwork.png" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Halsey_-_Badlands.png/220px-Halsey_-_Badlands.png" %}
+
+        </div>
       </div>
 
       <!-- Left and right controls -->
@@ -97,5 +97,40 @@
     </div>
   </div>
 
+  <h3>O que seus seguidores estão curtindo </h3>
 
+  <div class="container">
+    <div id="demo3" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- The slideshow -->
+      <div class="carousel-inner no-padding my-5">
+
+        <div class="carousel-item active">
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Shawn_Mendes_album.jpg/220px-Shawn_Mendes_album.jpg" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Halsey_-_Badlands.png/220px-Halsey_-_Badlands.png" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/c/c3/1989_de_Taylor_Swift.jpg/220px-1989_de_Taylor_Swift.jpg"%}
+          {% include "music/album_item.html" with image="https://images.genius.com/565381daa3a7d73a551d9738732b26d5.1000x1000x1.jpg" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ariana_Grande_My_Everything_2014_album_artwork.png/220px-Ariana_Grande_My_Everything_2014_album_artwork.png" %}
+        </div>
+
+        <div class="carousel-item">
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png/220px-Beyonce_-_Lemonade_%28Official_Album_Cover%29.png" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/pt/thumb/8/86/Capa_de_V_%28Maroon_5%29.png/220px-Capa_de_V_%28Maroon_5%29.png" %}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/DNCE_-_SWAAY_%28Album_Cover%29.png/220px-DNCE_-_SWAAY_%28Album_Cover%29.png"%}
+          {% include "music/album_item.html" with image="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png" %}
+          {% include "music/album_item.html" with image="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg" %}
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+         <span class="carousel-control-prev-icon sp"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#demo3" data-slide="next">
+        <span class="carousel-control-next-icon sp"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+
+    </div>
+  </div>
 {% endblock content%}
