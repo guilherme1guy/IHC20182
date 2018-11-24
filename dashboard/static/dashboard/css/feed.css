@@ -1,12 +1,17 @@
 .small-profile-img {
 
-    width: 32px; 
+    width: 32px;
     height: 32px;
 }
 
 .black-icon{
 
     color: black !important;
+}
+
+.red-icon{
+
+    color: red !important;
 }
 
 .content-card{
@@ -18,9 +23,9 @@
 }
 
 .content-card-body{
-    
+
 }
 
 .content-card-footer{
-    
+
 }

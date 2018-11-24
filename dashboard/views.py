@@ -22,7 +22,19 @@ class FeedView(TemplateView):
     ]
 
     imgs = [
-        static('core/img/BC.png'),
+        static('core/img/user.png'),
+        static('core/img/user1.png'),
+        static('core/img/user2.png'),
+        static('core/img/user3.png'),
+        static('core/img/user4.png'),
+        static('core/img/user5.png'),
+        static('core/img/user6.png'),
+        static('core/img/user7.png'),
+        static('core/img/user8.png'),
+        static('core/img/user9.png'),
+        static('core/img/user10.png'),
+        static('core/img/user11.png'),
+        static('core/img/user12.png'),
     ]
 
     mensages = [
@@ -44,7 +56,7 @@ class FeedView(TemplateView):
     def get_img():
         return choice(FeedView.imgs)
 
-    @staticmethod   
+    @staticmethod
     def get_mensage():
         return choice(FeedView.mensages)
 
@@ -65,6 +77,5 @@ class FeedView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["content"] = self.get_random_content()
-        
+
         return context
-    
