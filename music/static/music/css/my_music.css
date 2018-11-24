@@ -91,6 +91,7 @@ h3 {
 
 .page-switch .current{
   color: white !important;
+  text-decoration: none;
 }
 
 
