@@ -1,5 +1,7 @@
 {% extends 'core/base.html' %}
 
+{% load static %}
+
 {% block navbar %}
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
@@ -7,4 +9,83 @@
       <a class="nav-item nav-link" href="{% url 'music:my_music' %}">Músicas</a>
     </div>
   </div>
-{% endblock navbar%}
+{% endblock navbar %}
+
+{% block css %}
+  {{ block.super }}
+
+  <link href="{% static 'dashboard/css/feed.css' %}" rel="stylesheet">
+  
+{% endblock css %}
+
+{% block content %}
+
+    <div class="row">
+    
+      <div class="col">
+
+        <!-- left panel -->
+
+      </div>
+    
+
+      <div class="col-6">
+      
+        <!-- feed section -->
+
+        {% for content_piece in content  %}
+        
+          <div class="row my-2">
+            <div class="col">
+              <div class="card my-2 content-card">
+                <div class="card-header pt-1 pb-0 content-card-header">
+                  
+                  <div class="row">
+                    <div class="col-auto pt-1">
+                      <img src="{{ content_piece.author_img }}" class="img-circle small-profile-img"> 
+                    </div>
+                    <div class="col">
+                      <p class="font-weight-bold row my-0"> {{ content_piece.author }} </p>
+                      <p class="font-weight-light font-italic row my-0  ">26 de abril de 2018 às 16:00h</p>
+                    </div>
+                  </div>
+                
+                </div>
+
+                <div class="card-body content-card-body">
+                  <p class="card-text">{{ content_piece.menssage }}</p>
+                </div>
+
+                <div class="card-footer text-muted content-card-footer">
+                  <div class="row align-items-center"> 
+
+                    <div class="col px-1">  
+                      <div class="input-group">
+                        <input type="text" class="form-control">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button" id="button-post-comment"><i class="fas fa-comments black-icon"></i></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <i class="far fa-heart black-icon col-auto px-1"></i>
+                  </div>
+                </div>
+              </div>          
+            </div>
+          </div>  
+          
+        {% endfor %}
+
+      </div>
+
+      <div class="col">
+      
+        <!-- right panel -->
+
+      
+      </div>
+    
+    </div>
+
+{% endblock content %}
