@@ -1,6 +1,6 @@
 from django.views.generic.base import TemplateView
 from django.templatetags.static import static
-from random import choice, sample, shuffle
+from random import choice, sample, shuffle, randint
 
 
 class FeedView(TemplateView):
@@ -12,7 +12,7 @@ class FeedView(TemplateView):
     # posts can have text
     CONTENT_PHOTO = 'cph'
     CONTENT_PLAYLIST = 'cpl'
-    
+
     content_types = [
         CONTENT_MUSIC,
         CONTENT_PLAYLIST,
@@ -147,7 +147,6 @@ class FeedView(TemplateView):
     def get_playlist(size):
         return shuffle(sample(FeedView.musics, size))
 
-
     def get_random_content(self):
         content_list = []
 
@@ -161,6 +160,7 @@ class FeedView(TemplateView):
                 'menssage': FeedView.get_mensage(),
                 'date_time': "26 de Abril de 2018 às 16:00h",
                 'content_type': random_type,
+                'number_likes' : randint(0,101)
             }
 
             if random_type is FeedView.CONTENT_MUSIC:
@@ -173,11 +173,11 @@ class FeedView(TemplateView):
                     }
                 )
 
-            
 
 
 
-            
+
+
 
             content_list.append(content_piece)
 

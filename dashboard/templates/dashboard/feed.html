@@ -18,6 +18,13 @@
 
 {% endblock css %}
 
+{% block js %}
+  {{ block.super }}
+
+  <script type="text/javascript" src="{% static 'dashboard/js/feed.js' %}"></script>
+
+{%  endblock js %}
+
 {% block content %}
 
     <div class="row">
@@ -64,11 +71,11 @@
                           <i class="fas fa-play fa-3x play-button"></i>
                           <img class="img-fluid img-thumbnail" src={{content_piece.music.music_image_link}}>
                         </a>
-                      
+
                         <div class="album-info col border-bottom">{{content_piece.music.music_name}}<br><p class="font-weight-light font-italic">{{content_piece.music.music_author}} - {{content_piece.music.music_album}}</p></div>
                     </div>
                   {% endif %}
-                
+
                 </div>
 
                 <div class="card-footer text-muted content-card-footer">
@@ -83,7 +90,7 @@
                       </div>
                     </div>
                     <div>
-                      <button class="btn btn-outline-secondary" type="button" id="button-post-comment"><i class="far fa-heart red-icon col-auto px-1"></i></button>
+                      <button class="btn btn-outline-secondary" type="button" id="like" onclick="myFunction(this, {{content_piece.number_likes}})"><i id="heart"  class="far fa-heart red-icon col-auto px-1"></i><span id="number_likes">{{content_piece.number_likes}}</span></button>
                     </div>
                   </div>
                 </div>
