@@ -4,6 +4,18 @@
     height: 32px;
 }
 
+.album-img{
+    
+    width: 100%;
+    height: 100%;
+}
+
+.album-info{
+
+    border-color: #33333375 !important;
+    border-width: 3px !important;
+}
+
 .black-icon{
 
     color: black !important;
@@ -18,14 +30,24 @@
 
 }
 
-.content-card-header{
+.play-button{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: #ffffffca;
+}
+.play-button:hover{
+   color: #ffffff;
+}
 
+.content-card-header{
+    background: #bdbdbd;
 }
 
 .content-card-body{
-
+    background: #ebebeb;
 }
 
 .content-card-footer{
-
+    background: #bdbdbd;
 }

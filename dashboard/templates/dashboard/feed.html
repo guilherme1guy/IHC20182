@@ -37,7 +37,7 @@
 
           <div class="row my-2">
             <div class="col">
-              <div class="card my-2 content-card">
+              <div class="card my-1 content-card">
                 <div class="card-header pt-1 pb-0 content-card-header">
 
                   <div class="row">
@@ -46,14 +46,29 @@
                     </div>
                     <div class="col">
                       <p class="font-weight-bold row my-0"> {{ content_piece.author }} </p>
-                      <p class="font-weight-light font-italic row my-0">26 de abril de 2018 às 16:00h</p>
+                      <p class="font-weight-light font-italic row my-0">{{ content_piece.date_time }}</p>
                     </div>
                   </div>
 
                 </div>
 
                 <div class="card-body content-card-body">
+
+                  <div class="row px-2">
                   <p class="card-text">{{ content_piece.menssage }}</p>
+                  </div>
+
+                  {% if content_piece.content_type is view.CONTENT_MUSIC %}
+                    <div class="row px-2 pt-1 align-items-center music-item">
+                        <a class="album-img col" href="" onclick=abc(this) class="slider_info">
+                          <i class="fas fa-play fa-3x play-button"></i>
+                          <img class="img-fluid img-thumbnail" src={{content_piece.music.music_image_link}}>
+                        </a>
+                      
+                        <div class="album-info col border-bottom">{{content_piece.music.music_name}}<br><p class="font-weight-light font-italic">{{content_piece.music.music_author}} - {{content_piece.music.music_album}}</p></div>
+                    </div>
+                  {% endif %}
+                
                 </div>
 
                 <div class="card-footer text-muted content-card-footer">
