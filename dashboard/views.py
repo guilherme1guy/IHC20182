@@ -1,10 +1,89 @@
 from django.views.generic.base import TemplateView
 from django.templatetags.static import static
-from random import choice
+from random import choice, sample, shuffle
 
 
 class FeedView(TemplateView):
     template_name = "dashboard/feed.html"
+
+    CONTENT_MUSIC = 'cm'
+    CONTENT_VIDEO = 'cv'
+    # there is no content type for text, because all
+    # posts can have text
+    CONTENT_PHOTO = 'cph'
+    CONTENT_PLAYLIST = 'cpl'
+    
+    content_types = [
+        CONTENT_MUSIC,
+        CONTENT_PLAYLIST,
+        CONTENT_VIDEO,
+        CONTENT_PHOTO,
+    ]
+
+    musics = [
+        {
+            'music_name': 'Diamond Heart',
+            'music_author': 'Lady Gaga',
+            'music_album' : 'Joane',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png',
+        },
+        {
+            'music_name': 'American Teen',
+            'music_author': 'Khalid',
+            'music_album' : 'American Teen',
+            'music_image_link':  'https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg',
+        },
+        {
+            'music_name': 'In My Blood',
+            'music_author': 'Shawn Mendes',
+            'music_album' : 'Shawn Mendes',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Shawn_Mendes_album.jpg/220px-Shawn_Mendes_album.jpg',
+        },
+        {
+            'music_name': 'One Last Time',
+            'music_author': 'Ariana Grande',
+            'music_album' : 'My Everything',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ariana_Grande_My_Everything_2014_album_artwork.png/220px-Ariana_Grande_My_Everything_2014_album_artwork.png',
+        },
+        {
+            'music_name': 'Hold Me Down',
+            'music_author': 'Halsey',
+            'music_album' : 'Badlands',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Halsey_-_Badlands.png/220px-Halsey_-_Badlands.png',
+        },
+        {
+            'music_name': 'Shake It Off',
+            'music_author': 'Taylor Swift',
+            'music_album' : '1989',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/pt/thumb/c/c3/1989_de_Taylor_Swift.jpg/220px-1989_de_Taylor_Swift.jpg',
+        },
+        {
+            'music_name': 'Die for You',
+            'music_author': 'The Weeknd',
+            'music_album' : 'Starboy',
+            'music_image_link':  'https://images.genius.com/565381daa3a7d73a551d9738732b26d5.1000x1000x1.jpg',
+        },
+        {
+            'music_name': 'Hold Up',
+            'music_author': 'Beyonce',
+            'music_album' : 'Lemonade',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png/220px-Beyonce_-_Lemonade_%28Official_Album_Cover%29.png',
+        },
+        {
+            'music_name': 'Sugar',
+            'music_author': 'Maroon 5',
+            'music_album' : 'V',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/pt/thumb/8/86/Capa_de_V_%28Maroon_5%29.png/220px-Capa_de_V_%28Maroon_5%29.png',
+        },
+        {
+            'music_name': 'Cake by the Ocean',
+            'music_author': 'DNCE',
+            'music_album' : 'Swaay',
+            'music_image_link':  'https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/DNCE_-_SWAAY_%28Album_Cover%29.png/220px-DNCE_-_SWAAY_%28Album_Cover%29.png',
+        },
+
+
+    ]
 
     names = [
         'João Silva',
@@ -60,15 +139,45 @@ class FeedView(TemplateView):
     def get_mensage():
         return choice(FeedView.mensages)
 
+    @staticmethod
+    def get_music():
+        return choice(FeedView.musics)
+
+    @staticmethod
+    def get_playlist(size):
+        return shuffle(sample(FeedView.musics, size))
+
+
     def get_random_content(self):
         content_list = []
 
         for i in range(0, 10):
+
+            random_type = choice(FeedView.content_types)
+
             content_piece = {
                 'author': FeedView.get_name(),
-                'author_img' : FeedView.get_img(),
+                'author_img': FeedView.get_img(),
                 'menssage': FeedView.get_mensage(),
+                'date_time': "26 de Abril de 2018 às 16:00h",
+                'content_type': random_type,
             }
+
+            if random_type is FeedView.CONTENT_MUSIC:
+                content_piece.update({'music': FeedView.get_music()})
+
+            if random_type is FeedView.CONTENT_PLAYLIST:
+                content_piece.update(
+                    {
+                        'playlist': FeedView.get_playlist(choice(range(3,len(self.musics))))
+                    }
+                )
+
+            
+
+
+
+            
 
             content_list.append(content_piece)
 
