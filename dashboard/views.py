@@ -113,7 +113,6 @@ class FeedView(TemplateView):
         static('core/img/user9.png'),
         static('core/img/user10.png'),
         static('core/img/user11.png'),
-        static('core/img/user12.png'),
     ]
 
     mensages = [
