@@ -144,7 +144,7 @@ class FeedView(TemplateView):
 
     @staticmethod
     def get_playlist(size):
-        return shuffle(sample(FeedView.musics, size))
+        return sample(FeedView.musics, size)
 
     def get_random_content(self):
         content_list = []
