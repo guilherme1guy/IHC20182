@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block navbar %}
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link ml-5" href="{% url 'dashboard:feed' %}">Dashboard</a>
+      <a class="nav-item nav-link" href="#">Músicas</a>
+    </div>
+  </div>
+{% endblock navbar%}
+
+{% block css %}
+  <link href="{% static 'music/css/detail_playlist.css' %}" rel="stylesheet">
+{% endblock css%}
+
+{% block content %}
+  <div id="album-cover">
+    <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/a/ae/Shawn_Mendes_album.jpg/220px-Shawn_Mendes_album.jpg">
+  </div>
+
+ <div class="music_info">
+    <p class="artist">SHAWN MENDES</p>
+    <p class="title">Shawn Mendes</p>
+    <fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class ="full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+  </div>
+
+<ol id="playlist">
+  <li><a class="track" href="https://dl.dropboxusercontent.com/u/2255413/Perigee/01%20Searching%20%28Memoirs%20Of%20A%20New%20Discovery%29.m4a">Searching (Memoirs Of A New Discovery)</a> <span class="time">2:54</span></li>
+  <li><a class="track" href="https://dl.dropboxusercontent.com/u/2255413/Perigee/02%20Charade%20%28Exploring%20The%20Surface%29%20feat.%20Julie%20Thurman.m4a">Charade (Exploring The Surface) feat. Julie Thurman</a> <span class="time">3:04</span></li>
+  <li><a class="track" href="https://dl.dropboxusercontent.com/u/2255413/Perigee/03%20Speed%20of%20Sound%20%28An%20Interruption%20In%20Spaceflight%29.m4a">Speed of Sound (An Interruption In Spaceflight)</a> <span class="time">5:05</span></li>
+  <li><a class="track" href="https://dl.dropboxusercontent.com/u/2255413/Perigee/01%20Searching%20%28Memoirs%20Of%20A%20New%20Discovery%29.m4a">Searching (Memoirs Of A New Discovery)</a> <span class="time">2:54</span></li>
+  <li><a class="track" href="https://dl.dropboxusercontent.com/u/2255413/Perigee/02%20Charade%20%28Exploring%20The%20Surface%29%20feat.%20Julie%20Thurman.m4a">Charade (Exploring The Surface) feat. Julie Thurman</a> <span class="time">3:04</span></li>
+  <li><a class="track" href="https://dl.dropboxusercontent.com/u/2255413/Perigee/03%20Speed%20of%20Sound%20%28An%20Interruption%20In%20Spaceflight%29.m4a">Speed of Sound (An Interruption In Spaceflight)</a> <span class="time">5:05</span></li>
+</ol>
+{% endblock content%}
