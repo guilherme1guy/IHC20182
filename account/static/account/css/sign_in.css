@@ -41,10 +41,9 @@ body{
 }
 
 .login{
-  margin-top: 100px;
-  margin-left: 1250px;
   width: 400px;
   background: rgba(255, 255, 255, 0.5);
+  margin-top: 100px;
 }
 
 progress::-webkit-progress-bar {
