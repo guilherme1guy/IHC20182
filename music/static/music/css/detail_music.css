@@ -1,6 +1,5 @@
 #album-cover {
   max-height: 500px;
-  max-width: 300px;
   margin-left: 20%;
   margin-top: 5%;
   float: left;
@@ -16,13 +15,20 @@
   color:white;
 }
 
+.hr-style {
+    border: 0;
+    height: 2px;
+    margin-left:50px;
+    margin-right: 50px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
 
 /****** Style Star Rating Widget *****/
 
 .rating {
-  border: none;
-  margin-left: 50px;
-  width:  54.5%;
+  margin-right: 50%;
+  width: 55%;
 }
 
 .rating > input { display: none; }
@@ -55,6 +61,13 @@
 i{
   cursor :pointer;
 }
-i:hover{
-  color:#FEC35E;
+
+/* Share */
+
+.share {
+  text-align:center;
+}
+
+.share p {
+  font-size: 12px;
 }

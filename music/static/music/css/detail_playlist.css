@@ -7,9 +7,9 @@
 }
 ol#playlist {
   list-style-type: none;
-  margin-top: 150px;
-  margin-left: 15%;
-  width: 800px;
+  margin-top: 100px;
+  margin-left: 15.5%;
+  width: 65%;
   height: 200px;
   font-size: 16px;
   overflow-y: scroll;
