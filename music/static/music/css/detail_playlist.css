@@ -1,0 +1,13 @@
+#album-cover img {
+  max-height: 115px;
+  margin:0;
+}
+
+#album-cover {
+  max-width: 235px;
+}
+
+.title {
+  margin-top: 13%;
+  margin-bottom: 34px;
+}
