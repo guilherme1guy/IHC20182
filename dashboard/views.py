@@ -126,9 +126,22 @@ class FeedView(TemplateView):
         ' Vestibulum ultricies, leo at convallis luctus, urna tellus tempor dolor, eget malesuada metus orci a augue. Fusce gravida, libero ut tristique consectetur, neque dolor molestie elit, in accumsan sem quam quis purus. Nullam dignissim tortor ex, non posuere urna suscipit eu. Sed elementum venenatis diam, at tristique lacus feugiat at. In sit amet tellus vel magna aliquam blandit ultrices vitae felis.',
     ]
 
+    playlist = [
+        'Chorar no banho',
+        'Só música boa',
+        'Rock pesadão',
+        'Caminho do trabalho',
+        'Só SS',
+        'To de férias',
+    ]
+
     @staticmethod
     def get_name():
         return choice(FeedView.names)
+
+    @staticmethod
+    def get_name_playlist():
+        return choice(FeedView.playlist)
 
     @staticmethod
     def get_img():

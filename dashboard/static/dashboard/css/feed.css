@@ -86,3 +86,23 @@
   background-color: transparent;
   border-width: 0px;
 }
+
+.playlist-button{
+  border-color: black !important;
+}
+
+
+.playlist-button:hover{
+  background-color: #F1F1F1 !important;
+}
+
+.playlist-info{
+  border-width: 1px !important;
+  border-color: #6A6969  !important;
+  background: linear-gradient(to top, #bdbdbd 45%, #DCDCDC 95%);
+}
+
+
+.link-black{
+  color: black !important;
+}
