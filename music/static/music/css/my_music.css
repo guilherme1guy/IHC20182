@@ -49,11 +49,13 @@
   display: none;
 }
 
-.album-item:hover .play-button{
+.album-item:hover .play-button,
+.playlist-item:hover .play-button{
   display:block;
 }
 
-.album-item:hover .card-img-top{
+.album-item:hover .card-img-top,
+.playlist-item:hover .card-img-top{
   opacity: 0.6;
 }
 
