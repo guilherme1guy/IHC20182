@@ -11,16 +11,11 @@
   margin-top: 5%;
   max-width: 50%;
   text-align:center !important;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  color:white;
 }
 
-.artist {
-  font-family: 'Josefin Sans' !important;
-  color: white;
-}
-
-.title {
-  color:red;
-}
 
 /****** Style Star Rating Widget *****/
 
@@ -51,18 +46,15 @@
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  }
+.rating:not(:checked) > label:hover ~ label { color: red;  }
 
 .rating > input:checked + label:hover,
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+.rating > input:checked ~ label:hover ~ label { color: red;  }
 i{
   cursor :pointer;
 }
 i:hover{
   color:#FEC35E;
 }
-
-
-
