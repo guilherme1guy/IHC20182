@@ -47,7 +47,7 @@
   </div>
 
   <ol id="playlist">
-    <li><a class="track" href="#">Searching (Memoirs Of A New Discovery)</a> <span class="time">2:54</span></li>
+    <li><a class="track" href="#">Searching (Memoirs Of A New Discovery)<span class="time">2:54</span></a> </li>
     <li><a class="track" href="#">Charade (Exploring The Surface) feat. Julie Thurman</a> <span class="time">3:04</span></li>
     <li><a class="track" href="#">Speed of Sound (An Interruption In Spaceflight)</a> <span class="time">5:05</span></li>
     <li><a class="track" href="#">Searching (Memoirs Of A New Discovery)</a> <span class="time">2:54</span></li>
@@ -55,3 +55,8 @@
     <li><a class="track" href="#">Speed of Sound (An Interruption In Spaceflight)</a> <span class="time">5:05</span></li>
   </ol>
 {% endblock content%}
+
+{% block js %}
+  <script type="text/javascript" src="{% static 'core/js/player.js' %}"></script>
+  <script type="text/javascript" src="{% static 'music/js/album_play.js' %}"></script>
+{%  endblock js %}

@@ -52,3 +52,8 @@
     <li><a class="track" href="#">Speed of Sound (An Interruption In Spaceflight)</a> <span class="time">5:05</span></li>
   </ol>
 {% endblock content%}
+
+{% block js %}
+  <script type="text/javascript" src="{% static 'core/js/player.js' %}"></script>
+  <script type="text/javascript" src="{% static 'music/js/album_play.js' %}"></script>
+{%  endblock js %}

@@ -42,6 +42,11 @@ ol#playlist > li:before {
   display: inline-block;
 }
 
+.selected {
+    color: white !important;
+    background-color: transparent !important;
+}
+
 
 
 
