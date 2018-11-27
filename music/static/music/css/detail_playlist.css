@@ -1,48 +1,13 @@
-.time {
-  font-size: 12px;
-  font-weight: bold;
-  opacity: 0.3;
-  float: right;
-  color: white;
-}
-ol#playlist {
-  list-style-type: none;
-  margin-top: 100px;
-  margin-left: 15.5%;
-  width: 65%;
-  height: 200px;
-  font-size: 16px;
-  overflow-y: scroll;
-  transition: transform 0.4s ease-in-out, 0s box-shadow 0.3s;
-  border-radius: 0 5px 5px 0;
-  a {
-    display: inline-block;
-    width: 300px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+#album-cover img {
+  max-height: 115px;
+  margin:0;
 }
 
-ol#playlist > li {
-  padding: 12px 15px;
-  height: 50px;
-  position: relative;
+#album-cover {
+  max-width: 235px;
 }
 
-ol#playlist > li:before {
-  float: left;
-  text-align: right;
-  width: 1em;
-  margin-right: 1em;
-  font-size: 12px;
-  font-weight: bold;
-  opacity: 0.3;
-  vertical-align: baseline;
-  display: inline-block;
+.title {
+  margin-top: 13%;
+  margin-bottom: 34px;
 }
-
-
-
-
-
