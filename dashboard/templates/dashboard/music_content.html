@@ -1,0 +1,24 @@
+ <div class="panel-body">
+    <li class="list-group-item">
+    <div class="row px-2 pt-1 align-items-center music-item">
+        <a class="album-img col" href="" onclick=abc(this) class="slider_info">
+            <i class="fas fa-play fa-3x play-button"></i>
+            <img class="img-fluid img-thumbnail" src={{content_piece.music.music_image_link}}>
+        </a>
+
+        <div class=" col">
+            {{content_piece.music.music_name}}
+            <br>
+            <p class="font-weight-light font-italic border-bottom album-info">
+            {{content_piece.music.music_author}} - {{content_piece.music.music_album}}
+            </p>
+            <div class="row justify-content-end">
+            <div class="col-auto">
+                <button class="fas fa-plus plus-button fa-2x"></button>
+                <button class="fas fa-info-circle info-button fa-2x"></button>
+            </div>
+            </div>
+        </div>
+    </div>
+    </li>
+</div>
