@@ -26,9 +26,21 @@
   margin-top: 40px;
 }
 
-#album{
+#album,
+#playlist{
   margin-right: 37px;
 }
+
+#playlist img {
+  max-width: 70px;
+  float: left;
+  margin-top:0px;
+}
+
+.playlist-item {
+  margin-top: 10%;
+}
+
 
 .play-button{
   position: absolute;

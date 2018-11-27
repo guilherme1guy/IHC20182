@@ -19,17 +19,12 @@
       {% endif %}
     </a>
     {% if num < 11  %}
-      <a class="details" href="{% url 'music:detail_playlist'%}">
-        <i class="fas fa-external-link-square-alt float-left mr-1"></i>
-        <span>Detalhes</span>
-      </a>
-    {% elif num < 21 %}
-      <a class="details" href="{% url 'music:detail_album'%}">
+      <a class="details" href="{% url 'music:detail_music'%}">
         <i class="fas fa-external-link-square-alt float-left mr-1"></i>
         <span>Detalhes</span>
       </a>
     {% else %}
-      <a class="details" href="{% url 'music:detail_music'%}">
+      <a class="details" href="{% url 'music:detail_album'%}">
         <i class="fas fa-external-link-square-alt float-left mr-1"></i>
         <span>Detalhes</span>
       </a>
