@@ -126,7 +126,7 @@ overflow: hidden;
 }
 
 .dropdown-menu .btn {
-  background-color: red;
+  background-color: #af0000;
   padding-top: 8px !important;
   padding-bottom: 8px !important;
   box-sizing: content-box;
