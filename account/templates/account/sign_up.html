@@ -55,13 +55,13 @@
 
         <div class="navbar-nav ml-auto">
             <li class="nav-item mr-5">
-            <a class="nav-link" href=""><ins>Entrar</ins></a>
+            <a class="nav-link" href="{% url 'account:sign_in' %}"><ins>Entrar</ins></a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href=""><ins>Cadastrar</ins></a>
+                <a class="nav-link" href="#"><ins>Cadastrar</ins></a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link"><ins>Ajuda?</ins></a>
+                <a class="nav-link" href="{% url 'account:instruction_page' %}"><ins>Ajuda?</ins></a>
             </li>
         </div>
 
@@ -79,12 +79,12 @@
                     <div class="row mb-2 ml-3">
                         <h5>Cadastrar com:</h5>
                     </div>
-                    <div class="row mb-5 ml-3">
+                    <div class="row mb-2 ml-3">
                         <div class="col">
-                            <button type="button" class="btn btn-danger"><i class="fab fa-google-plus fa-lg"></i> Google</button>
+                            <a href="{% url 'account:sign_in' %}"><div class="btn btn-danger"><i class="fab fa-google-plus fa-lg"></i> Google</div></a>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-primary"><i class="fab fa-facebook-square fa-lg"></i> Facebook</button>
+                            <a href="{% url 'account:sign_in' %}"><div class="btn btn-primary"><i class="fab fa-facebook-square fa-lg"></i> Facebook</div></a>
                         </div>
                     </div>
                     <form>
