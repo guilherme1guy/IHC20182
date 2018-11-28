@@ -125,13 +125,15 @@ overflow: hidden;
   margin-top: 15px;
 }
 
-.dropdown-menu .btn {
-  background-color: #af0000;
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
-  box-sizing: content-box;
-  -moz-box-sizing: content-box;
+.grey-link:hover,
+ .red-link:hover{
+    color: black !important;
 }
+
+.red-link {
+  color: red !important;
+}
+
 
 /* Notifications */
 
