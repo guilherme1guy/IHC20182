@@ -140,6 +140,23 @@ class FeedView(TemplateView):
         return choice(FeedView.names)
 
     @staticmethod
+    def get_comments():
+        
+        comments = []
+
+        for i in range(0, choice([0, 0, 0, 1, 1, 2])):
+            comments.append(
+                {
+                    'author': FeedView.get_name(),
+                    'img': FeedView.get_img(),
+                    'text': FeedView.get_mensage()
+                }
+            )
+
+        return comments
+
+
+    @staticmethod
     def get_name_playlist():
         return choice(FeedView.playlist)
 
@@ -172,7 +189,8 @@ class FeedView(TemplateView):
                 'menssage': FeedView.get_mensage(),
                 'date_time': "26 de Abril de 2018 às 16:00h",
                 'content_type': random_type,
-                'number_likes' : randint(0,101)
+                'number_likes' : randint(0,101),
+                'comments': FeedView.get_comments()
             }
 
             if random_type is FeedView.CONTENT_MUSIC:

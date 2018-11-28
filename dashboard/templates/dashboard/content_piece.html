@@ -31,17 +31,10 @@
 
   <div class="card-footer text-muted content-card-footer">
     <div class="row align-items-center">
+      <div class="col">
 
-      <div class="col px-1">
-        <div class="input-group">
-          <input type="text" class="form-control">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="button-post-comment"><i class="fas fa-comments black-icon"></i></button>
-          </div>
-        </div>
-      </div>
-      <div>
-        <button class="btn btn-outline-secondary" type="button" id="like" onclick="myFunction(this, {{content_piece.number_likes}})"><i id="heart"  class="far fa-heart red-icon col-auto px-1"></i><span id="number_likes">{{content_piece.number_likes}}</span></button>
+        {% include "dashboard/content_footer.html" with content_piece=content_piece%}
+
       </div>
     </div>
   </div>
