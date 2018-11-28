@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col px-1">
+        <div class="input-group">
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-post-comment"><i class="fas fa-comments black-icon"></i></button>
+        </div>
+        </div>
+    </div>
+    <div clas="col-auto">
+        <button class="btn btn-outline-secondary" type="button" id="like" onclick="myFunction(this, {{content_piece.number_likes}})"><i id="heart"  class="far fa-heart red-icon col-auto px-1"></i><span id="number_likes">{{content_piece.number_likes}}</span></button>
+    </div>
+</div>
+
+{% for comment in content_piece.comments %}
+
+    <div class="row mt-2">
+
+        <div class="col-auto pt-1 px-0 mx-1">
+            <img src="{{ comment.img }}" class="img-circle small-profile-img">
+        </div>
+
+        <div class="col">
+
+            <div class="row comment-box rounded">
+        
+                <div class="col mx-1">
+                    <p class="row my-0"> {{ comment.text }} </p>
+                </div>
+        
+                <div class="w-100" ></div>
+
+                <div class="col"></div>
+                <div class="col-auto mx-1 pt-1">
+                    <p class="font-weight-bold row my-0"> {{ comment.author }} </p>
+                </div>
+
+            </div>
+        
+        </div>
+        
+    
+
+    </div>
+
+
+{% endfor %}
+

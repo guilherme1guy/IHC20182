@@ -1,0 +1,41 @@
+<div class="card my-1 content-card">
+  <div class="card-header pt-1 pb-0 content-card-header">
+
+    <div class="row">
+      <div class="col-auto pt-1">
+        <img src="{{ content_piece.author_img }}" class="img-circle small-profile-img">
+      </div>
+      <div class="col">
+        <p class="font-weight-bold row my-0"> {{ content_piece.author }} </p>
+        <p class="font-weight-light font-italic row my-0">{{ content_piece.date_time }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card-body content-card-body">
+
+    <div class="row px-2">
+    <p class="card-text">{{ content_piece.menssage }}</p>
+    </div>
+
+    {% if content_piece.content_type is view.CONTENT_PLAYLIST %}
+      {% include "dashboard/playlist_content.html" with content_piece=content_piece %}
+    {% endif %}
+
+    {% if content_piece.content_type is view.CONTENT_MUSIC %}
+      {% include "dashboard/music_content.html" with content_piece=content_piece %}
+    {% endif %}
+
+  </div>
+
+  <div class="card-footer text-muted content-card-footer">
+    <div class="row align-items-center">
+      <div class="col">
+
+        {% include "dashboard/content_footer.html" with content_piece=content_piece%}
+
+      </div>
+    </div>
+  </div>
+</div>

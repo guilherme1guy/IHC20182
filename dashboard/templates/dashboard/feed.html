@@ -1,5 +1,7 @@
 {% extends 'core/base.html' %}
 
+{% load static %}
+
 {% block navbar %}
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
@@ -7,4 +9,58 @@
       <a class="nav-item nav-link" href="{% url 'music:my_music' %}">Músicas</a>
     </div>
   </div>
-{% endblock navbar%}
+{% endblock navbar %}
+
+{% block css %}
+  {{ block.super }}
+
+  <link href="{% static 'dashboard/css/feed.css' %}" rel="stylesheet">
+
+{% endblock css %}
+
+{% block js %}
+  {{ block.super }}
+
+  <script type="text/javascript" src="{% static 'dashboard/js/feed.js' %}"></script>
+
+{%  endblock js %}
+
+{% block content %}
+
+    <div class="row">
+
+      <div class="col">
+
+        <!-- left panel -->
+
+      </div>
+
+
+      <div class="col-6">
+
+        <!-- feed section -->
+
+        {% for content_piece in content  %}
+
+          <div class="row my-2">
+            <div class="col">
+            
+              {% include "dashboard/content_piece.html" with content_piece=content_piece %}
+
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="col">
+
+        <!-- right panel -->
+
+
+      </div>
+
+    </div>
+
+{% endblock content %}

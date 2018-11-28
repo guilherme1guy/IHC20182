@@ -1,0 +1,121 @@
+.small-profile-img {
+
+    width: 32px;
+    height: 32px;
+}
+
+.album-info{
+
+    border-color: #33333375 !important;
+    border-width: 3px !important;
+}
+
+.black-icon{
+
+    color: black !important;
+}
+
+.red-icon{
+
+    color: red !important;
+}
+
+.play-button{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: #ffffffca;
+}
+
+.small-play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffffca;
+}
+
+.play-button:hover{
+   color: #ffffff;
+}
+
+.small-play-button:hover{
+   color: #ffffff;
+}
+
+.content-card-header{
+    background: #bdbdbd;
+}
+
+.content-card-body{
+    background: #ebebeb;
+}
+
+.content-card-footer{
+    background: #bdbdbd;
+}
+
+.list-group{
+    height: 30rem;
+
+    overflow:scroll;
+    overflow-x: hidden;
+}
+
+.playlist-item{
+    height: 10rem;
+
+}
+
+.img-playlist{
+  height: auto;
+  min-width: 10%;
+  max-width: 50%
+
+}
+
+.plus-button{
+  color: rgb(49, 49, 49);
+  background-color: transparent;
+  border-width: 0px;
+}
+
+.plus-button:hover{
+    color: green;
+}
+
+.info-button{
+    color: rgb(49, 49, 49);
+  background-color: transparent;
+  border-width: 0px;
+}
+
+.info-button:hover{
+    color: blue;
+}
+
+.playlist-button{
+  border-color: black !important;
+}
+
+
+.playlist-button:hover{
+  background-color: #F1F1F1 !important;
+}
+
+.playlist-info{
+  border-width: 1px !important;
+  border-top: transparent !important;
+  border-color: #6A6969  !important;
+  background: linear-gradient(to top, #bdbdbd 45%, #DCDCDC 95%);
+}
+
+
+
+.link-black{
+  color: black !important;
+}
+
+.comment-box{
+    background-color: white;
+}

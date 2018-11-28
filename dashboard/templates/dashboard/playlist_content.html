@@ -1,0 +1,51 @@
+
+<div class="row justify-content-center">
+    <div class="col mx-2">
+    <div class="row">
+        <ul class="list-group col pb-0 mb-0">
+            
+            {% for music_playlist in content_piece.playlist %}
+            <li class="list-group-item playlist-item">
+
+                <div class="row mx-0 px-0 pt-1 music-item justify-content-between align-items-center">
+                    <a class="col" href="" onclick=abc(this) class="slider_info">
+                        <div class="row justify-content-center">
+                        <div class="col-auto">
+                        <i class="fas fa-play fa-2x small-play-button"></i>
+                        <img class="img-thumbnail img-playlist" src={{music_playlist.music_image_link}}>
+                        </div>
+                        </div>
+                    </a>
+
+                    <div class="col album-info border-bottom">
+                        {{music_playlist.music_name}}
+                        <p class="font-weight-light font-italic">
+                            {{music_playlist.music_author}} - {{music_playlist.music_album}}
+                        </p>
+                    </div>
+                    
+                    <div class="col-auto">
+                        <button class="fas fa-plus-circle plus-button fa-2x"></button>
+                        <button class="fas fa-external-link-square-alt info-button fa-2x"></button>
+                    </div>
+                </div>
+
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+    <div class="row playlist-info border rounded-bottom justify-content-between">
+        <div class="col py-2 font-weight-bold ">
+            Playlist: {{view.get_name_playlist}}
+        </div>
+        <div class="col py-2 font-weight-bold">
+            Autor: {{view.get_name}}
+        </div>
+        <div class="col py-2">
+            <button class="font-weight-bold btn playlist-button">Ir para playlist</button>
+        </div>
+    </div>
+    </div>
+</div>
