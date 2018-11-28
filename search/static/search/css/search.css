@@ -190,6 +190,10 @@
     .pass-down{
         margin-bottom: 50%;
     }
+
+    .down-corpyright{
+      margin-bottom: 34%;
+    }
     
     progress::-webkit-progress-bar {
       background-color: red;

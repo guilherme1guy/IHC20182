@@ -1,4 +1,4 @@
-{% load staticfiles%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt_BR">
   <head>
@@ -96,7 +96,7 @@
                             <label for="Password">Senha</label>
                             <input type="password" class="form-control" id="Password">
                         </div>
-                        <button type="submit" class="btn btn-dark float-right mb-5">Entrar</button>
+                        <a href="{% url 'dashboard:feed' %}"><div class="btn btn-dark float-right mb-5">Entrar</div></a>
                     </form>
             </div>
         </div>
