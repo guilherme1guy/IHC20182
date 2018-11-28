@@ -76,15 +76,23 @@
 }
 
 .plus-button{
-  color: green;
+  color: rgb(49, 49, 49);
   background-color: transparent;
   border-width: 0px;
 }
 
+.plus-button:hover{
+    color: green;
+}
+
 .info-button{
-  color: blue;
+    color: rgb(49, 49, 49);
   background-color: transparent;
   border-width: 0px;
+}
+
+.info-button:hover{
+    color: blue;
 }
 
 .playlist-button{
