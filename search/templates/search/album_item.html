@@ -1,0 +1,20 @@
+{% load static %}
+<link href="{% static 'search/css/search.css' %}" rel="stylesheet">
+<div id="album" class="col-xs-2 col-sm-2 col-md-2 float-left">
+            <div class="album-item mr-5">
+                    <a class="album-img" href="#" onclick=abc(this) class="slider_info">
+                        <img class="img-fluid ml-5" src={{image}}>
+                    </a>
+                    <div class="album-info ml-5"> Same Mistake <br> James Blunt </div>
+            </div>
+                
+            <div id=" album-options" class="float-right ml-5">
+                <a class="add" href="{% url 'music:my_music' %}">
+                        <i class="fas fa-plus-circle f icon_add ml-5"></i>
+                        <span class="icon_add ml-5">Adicionar</span>
+                        <i class="fas fa-external-link-square-alt f icon_add ml-5"></i>
+                        <span class="icon_add ml-5">Detalhes</span>
+                </a>
+                </a>
+            </div>
+</div>

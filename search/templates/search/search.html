@@ -1,1 +1,106 @@
-<h1>Test</h1>
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block navbar %}
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link ml-5" href="{% url 'dashboard:feed' %}">Dashboard</a>
+      <a class="nav-item nav-link selected" href="#">Músicas</a>
+    </div>
+  </div>
+{% endblock navbar%}
+
+{% block css %}
+  <link href="{% static 'search/css/search.css' %}" rel="stylesheet">
+{% endblock css%}
+
+{% block content %}
+
+<div class="row search_input">
+  <div class="col">
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+  </div>
+  <div class="col col-lg-1">
+      <a href="#"><i class="fas fa-search fa-2x"></i></a>
+  </div>
+</div>
+
+<h3 class="text-white mt-5 tag-music"><strong>Usuários</strong></h3>
+
+  <div class="users">
+    <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- The slideshow -->
+      <div class="carousel-inner no-padding my-5">
+
+        <div class="carousel-item active">
+          {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/06/best-avatar-profile-pictures-2.png" %}
+          {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/06/avatars-profile-picture-5.png" %}
+          {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/06/avatars-for-profile-pictures-1.png" %}
+          {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/07/profile-pictures-avatars-3.png" %}
+          {% include "search/search_perfil.html" with image="http://www.firebranddesigns.net/wp-content/uploads/avatar-1-300x300.png" %}
+        </div>
+
+        <div class="carousel-item">
+            {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/06/best-avatar-profile-pictures-2.png" %}
+            {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/06/avatars-profile-picture-5.png" %}
+            {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/06/avatars-for-profile-pictures-1.png" %}
+            {% include "search/search_perfil.html" with image="http://profilepicturesdp.com/wp-content/uploads/2018/07/profile-pictures-avatars-3.png" %}
+            {% include "search/search_perfil.html" with image="http://www.firebranddesigns.net/wp-content/uploads/avatar-1-300x300.png" %}
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+         <span class="carousel-control-prev-icon sp"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon sp"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+
+    </div>
+  </div>
+
+<h3 class="text-white mt-5 tag-music"><strong>Músicas</strong></h3>
+
+<div class="musics">
+    <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
+        <!-- The slideshow -->
+        <div class="carousel-inner no-padding my-5">
+  
+          <div class="carousel-item active">
+              {% include "search/album_item.html" with num=22 image="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png/220px-Beyonce_-_Lemonade_%28Official_Album_Cover%29.png" %}
+              {% include "search/album_item.html" with num=23 image="https://upload.wikimedia.org/wikipedia/pt/thumb/8/86/Capa_de_V_%28Maroon_5%29.png/220px-Capa_de_V_%28Maroon_5%29.png" %}
+              {% include "search/album_item.html" with num=24 image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/DNCE_-_SWAAY_%28Album_Cover%29.png/220px-DNCE_-_SWAAY_%28Album_Cover%29.png"%}
+              {% include "search/album_item.html" with num=26 image="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png" %}
+              {% include "search/album_item.html" with num=25 image="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg" %}
+          </div>
+  
+          <div class="carousel-item">
+              {% include "search/album_item.html" with num=22 image="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Beyonce_-_Lemonade_%28Official_Album_Cover%29.png/220px-Beyonce_-_Lemonade_%28Official_Album_Cover%29.png" %}
+              {% include "search/album_item.html" with num=23 image="https://upload.wikimedia.org/wikipedia/pt/thumb/8/86/Capa_de_V_%28Maroon_5%29.png/220px-Capa_de_V_%28Maroon_5%29.png" %}
+              {% include "search/album_item.html" with num=24 image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/DNCE_-_SWAAY_%28Album_Cover%29.png/220px-DNCE_-_SWAAY_%28Album_Cover%29.png"%}
+              {% include "search/album_item.html" with num=26 image="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png" %}
+              {% include "search/album_item.html" with num=25 image="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg" %}
+          </div>
+  
+        </div>
+  
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+           <span class="carousel-control-prev-icon sp"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon sp"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+  
+      </div>
+  </div>
+
+{% endblock content%}
