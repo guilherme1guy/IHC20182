@@ -1,0 +1,34 @@
+<div id="album" class="col-xs-2 col-sm-2 col-md-2 float-left">
+
+  <div class="album-item">
+    <img class="img-fluid card-img-top" src={{image}}>
+    <a id="album-play-{{num}}" href="#" class="slider_info">
+      <i class="fas fa-play fa-3x play-button"></i>
+    </a>
+    <div class="album-info"> Lemonade <br> Beyoncé </div>
+  </div>
+
+  <div id="album-options" class="float-right">
+    <a class="add" href="{% url 'music:my_music' %}">
+      {% if request.resolver_match.url_name == "discover" %}
+        <i class="fas fa-plus-circle float-left mr-1"></i>
+        <span>Adicionar</span>
+      {% else %}
+        <i class="fas fa-trash-alt float-left mr-1"></i>
+        <span>Remover</span>
+      {% endif %}
+    </a>
+    {% if num < 11  %}
+      <a class="details" href="{% url 'music:detail_music'%}">
+        <i class="fas fa-external-link-square-alt float-left mr-1"></i>
+        <span>Detalhes</span>
+      </a>
+    {% else %}
+      <a class="details" href="{% url 'music:detail_album'%}">
+        <i class="fas fa-external-link-square-alt float-left mr-1"></i>
+        <span>Detalhes</span>
+      </a>
+    {% endif %}
+  </div>
+
+</div>

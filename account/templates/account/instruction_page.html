@@ -1,0 +1,116 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% block title %}BeatClan{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="IHC">
+
+    {% block bootstrap %}
+
+      <!-- CSS  -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+      <!-- JS-->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <!-- Custom fonts for this template -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    {% endblock bootstrap%}
+
+    {% block css %}
+      <!-- Custom CSS-->
+      <link href="{% static 'account/css/help_page.css' %}" rel="stylesheet">
+    {% endblock css %}
+
+  </head>
+
+  <body id="page-top">
+
+        <div id="backgroud"></div>
+
+    <!-- Navigation -->
+    {% block navbar %}
+      <nav class="navbar navbar-expand-lg primary-color">
+
+        <img src="{% static 'core/img/BC.png' %}" width="40px" alt="">
+        <div class="navbar-nav mr-auto ml-3">
+            <li class="nav-item"><h2 class="text-white">BeatClan<h2></li>
+        </div>
+
+        <div class="navbar-nav ml-auto">
+            <li class="nav-item mr-5">
+            <a class="nav-link" href="{% url 'sign_in'%}"><ins>Entrar</ins></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link" href="{% url 'sign_up'%}"><ins>Cadastrar</ins></a>
+            </li>
+            <li class="nav-item mr-5">
+                <a class="nav-link"><ins>Ajuda?</ins></a>
+            </li>
+        </div>
+
+      </nav>
+    {% endblock navbar %}
+
+    <div class="container">
+
+            <h1 class="mt-5 mb-5 text-white">O que é o BeatClan</h1>
+
+            <p class="text-white text-justify">Lorem ipsum adipiscing scelerisque sollicitudin mauris cras magna per, ipsum class rhoncus taciti curae orci curabitur, curae volutpat est bibendum pretium senectus tristique. fermentum feugiat nisl tellus auctor ante cursus aliquam, tristique proin inceptos consectetur duis ligula mollis, potenti lacinia hendrerit egestas lectus ante. bibendum posuere porta orci massa varius molestie sit consequat eros, ac iaculis aliquam eros placerat platea urna risus tellus lorem, ornare litora justo aenean condimentum dapibus viverra habitant. neque sapien nec curae elit varius morbi pharetra sollicitudin hac fames, tempus phasellus pretium suspendisse nostra porta tristique conubia sagittis. 
+
+                    Vestibulum dui dapibus augue molestie nostra facilisis vitae, litora aptent aenean libero cubilia aptent diam, quis nam condimentum phasellus enim aptent. volutpat ullamcorper proin ad gravida curae inceptos eleifend enim nullam, tellus sapien donec purus netus viverra eu id donec platea, inceptos ullamcorper nec sociosqu curae habitasse dui felis. pretium senectus ligula tincidunt eget felis non vulputate malesuada, condimentum gravida dictum libero fermentum augue fermentum tellus tristique, massa sagittis commodo lorem justo turpis cursus. dictum auctor facilisis felis bibendum proin posuere, purus dictumst leo tellus lobortis, sed lectus etiam risus nisi. 
+                
+                    Risus nullam ut vestibulum scelerisque hac iaculis, ligula per class maecenas per, vestibulum egestas pharetra risus adipiscing. nostra tortor cursus ante massa class viverra donec hendrerit, augue hendrerit nullam suspendisse vehicula ac placerat, laoreet dapibus fames aliquam eu euismod lobortis. sed scelerisque ligula elit duis hac eleifend ac posuere fames, lacinia at mattis metus phasellus adipiscing habitasse lobortis erat ornare, et faucibus pellentesque habitant nibh viverra pharetra odio. integer interdum convallis senectus congue vehicula luctus vulputate mauris massa nam dictumst, iaculis elit feugiat lobortis ante inceptos velit sociosqu pellentesque nam. 
+                
+                    Ultricies posuere curabitur aliquam taciti velit felis aliquam nulla ante maecenas vel nulla nunc a nisi, nec hac pulvinar primis orci ligula tincidunt donec magna consectetur diam torquent felis nec. enim sociosqu placerat orci mattis quis fusce porttitor nullam viverra purus, elementum aliquet eleifend nisi lacinia donec massa etiam hac non adipiscing, viverra arcu nec ut est mi consectetur in metus. hendrerit morbi condimentum habitant aenean diam laoreet enim, hac ut amet litora lobortis maecenas, ligula sodales imperdiet lacus nibh et. proin non praesent tincidunt laoreet suspendisse aliquam non sociosqu, faucibus aliquam metus quisque tellus quam vitae, elementum eget potenti fermentum luctus quisque sed. 
+                
+                    Condimentum convallis sagittis lacinia nam vel sapien duis enim sollicitudin, nostra ultricies non rutrum risus varius bibendum euismod urna aliquam, rutrum etiam dictum pulvinar felis commodo molestie scelerisque. sagittis eleifend molestie nostra potenti est felis pretium potenti, hendrerit augue ullamcorper quisque cursus aliquet blandit phasellus, metus rutrum tristique amet tristique ullamcorper interdum. lectus nibh bibendum tortor euismod elit hendrerit felis litora, dolor tincidunt tortor massa ornare class sit volutpat magna, auctor bibendum dictumst senectus purus lacinia mollis. varius nam hendrerit rhoncus porta hendrerit eleifend justo urna sed ut himenaeos habitasse morbi, proin non dictum posuere lorem lacus eget mauris blandit nisl pulvinar. 
+                
+                    Taciti imperdiet dapibus mauris felis dictum tempus tempor, quis cras duis mi donec ullamcorper integer, imperdiet erat viverra magna class ad. 
+            </p>
+            
+            <div class="row text-white">
+                <h2><strong>O básico</strong></h2> 
+            </div>   
+            
+            <div class="row text-white">
+                <div class="row">
+                    <h3 class="ml-2 mt-2"><strong>10 artistas mais consultados</strong></h3>
+                </div>
+            </div>    
+
+            <div class="row text-white">
+                    <ul >
+                    <li>
+                       <h4>Beatclan para artistas</h4> 
+                    </li>
+                    <li>
+                       <h4>Veja como começar</h4> 
+                    </li>
+                    <li>
+                       <h4>Buscar</h4> 
+                    </li>
+                    <li>
+                       <h4>Ordem aleatório</h4> 
+                    </li>
+                    <li>
+                       <h4>Seu album</h4> 
+                    </li>
+                    <li>
+                       <h4>Onde o Spotify está disponível?</h4> 
+                    </li>
+                    <li>
+                       <h4>Como tocar música</h4> 
+                    </li>
+                </ul>
+            </div>
+    </div>
+  </body>
+</html>

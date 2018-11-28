@@ -1,0 +1,38 @@
+<div id="playlist" class="col-xs-2 col-sm-2 col-md-2 float-left">
+
+  <div class="playlist-item">
+    {% if num|divisibleby:2%}
+      <img class="img-fluid card-img-top" src={{image}}>
+      <img class="img-fluid card-img-top" src="https://images.genius.com/565381daa3a7d73a551d9738732b26d5.1000x1000x1.jpg">
+      <img class="img-fluid card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/91C3krr3q-L._SX425_.jpg">
+      <img class="img-fluid card-img-top" src="https://upload.wikimedia.org/wikipedia/pt/thumb/8/86/Capa_de_V_%28Maroon_5%29.png/220px-Capa_de_V_%28Maroon_5%29.png">
+    {% else%}
+      <img class="img-fluid card-img-top" src={{image}}>
+      <img class="img-fluid card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Ariana_Grande_My_Everything_2014_album_artwork.png/220px-Ariana_Grande_My_Everything_2014_album_artwork.png" >
+      <img class="img-fluid card-img-top" src="https://upload.wikimedia.org/wikipedia/en/f/fd/Lady_Gaga_-_Joanne_%28Official_Album_Cover%29.png">
+      <img class="img-fluid card-img-top" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Halsey_-_Badlands.png/220px-Halsey_-_Badlands.png">
+    {% endif%}
+    <a id="playlist-play-{{num}}" href="#" class="slider_info">
+      <i class="fas fa-play fa-3x play-button"></i>
+    </a>
+    <div class="album-info"> Lemonade <br> Beyoncé </div>
+  </div>
+
+  <div id="album-options" class="float-right">
+    <a class="add" href="{% url 'music:my_music' %}">
+      {% if request.resolver_match.url_name == "discover" %}
+        <i class="fas fa-plus-circle float-left mr-1"></i>
+        <span>Adicionar</span>
+      {% else %}
+        <i class="fas fa-trash-alt float-left mr-1"></i>
+        <span>Remover</span>
+      {% endif %}
+    </a>
+
+    <a class="details" href="{% url 'music:detail_playlist'%}">
+      <i class="fas fa-external-link-square-alt float-left mr-1"></i>
+      <span>Detalhes</span>
+    </a>
+  </div>
+
+</div>
