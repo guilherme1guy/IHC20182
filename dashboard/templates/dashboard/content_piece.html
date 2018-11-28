@@ -6,8 +6,8 @@
         <img src="{{ content_piece.author_img }}" class="img-circle small-profile-img">
       </div>
       <div class="col">
-        <p class="font-weight-bold row my-0"> {{ content_piece.author }} </p>
-        <p class="font-weight-light font-italic row my-0">{{ content_piece.date_time }}</p>
+        <p class="black-text font-weight-bold row my-0"> {{ content_piece.author }} </p>
+        <p class="black-text font-weight-light font-italic row my-0">{{ content_piece.date_time }}</p>
       </div>
     </div>
 
@@ -16,7 +16,7 @@
   <div class="card-body content-card-body">
 
     <div class="row px-2">
-    <p class="card-text">{{ content_piece.menssage }}</p>
+    <p class="black-text card-text">{{ content_piece.menssage }}</p>
     </div>
 
     {% if content_piece.content_type is view.CONTENT_PLAYLIST %}
