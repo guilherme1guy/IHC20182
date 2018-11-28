@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'dashboard.apps.DashboardConfig',
     'music.apps.MusicConfig',
+    'search.apps.SearchConfig',
 ]
 
 MIDDLEWARE = [

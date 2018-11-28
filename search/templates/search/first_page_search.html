@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block navbar %}
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link ml-5" href="{% url 'dashboard:feed' %}">Dashboard</a>
+      <a class="nav-item nav-link selected" href="#">Músicas</a>
+    </div>
+  </div>
+{% endblock navbar%}
+
+{% block css %}
+  <link href="{% static 'search/css/search.css' %}" rel="stylesheet">
+{% endblock css%}
+
+{% block content %}
+
+<div class="row search_input pass-down">
+  <div class="col">
+      <div class="input-group mb-3">
+          <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+  </div>
+  <div class="col col-lg-1">
+      <a href="{% url 'search:result' %}"><i class="fas fa-search fa-2x"></i></a>
+  </div>
+</div>
+
+
+{% endblock content%}

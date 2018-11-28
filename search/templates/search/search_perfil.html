@@ -1,0 +1,23 @@
+{% load static %}
+<link href="{% static 'search/css/search.css' %}" rel="stylesheet">
+<div id="album" class="col-xs-2 col-sm-2 col-md-2 float-left">
+            <div class="album-item mr-5">
+                    <a class="album-img" href="#" onclick=abc(this) class="slider_info">
+                        <img class="img-fluid ml-5" src={{image}}>
+                    </a>
+                    <div class="album-info ml-5"> Isaias <br> Candido </div>
+            </div>
+                
+            <div id=" album-options" class="float-right ml-5">
+                <a class="add" href="{% url 'music:my_music' %}">
+                    {% if request.resolver_match.url_name == "discover" %}
+                    <i class="fas fa-user-plus float-right mr-5"></i>
+                    <span class="icon_add ml-5">Adicionar</span>
+                    {% else %}
+                        <i class="fas fa-user-plus icon_add ml-5"></i>
+                        <span class="icon_add ml-5">Adicionar</span>
+                    {% endif %}
+                </a>
+                </a>
+            </div>
+</div>
