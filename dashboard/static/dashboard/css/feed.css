@@ -25,10 +25,6 @@
     color: red !important;
 }
 
-.content-card{
-
-}
-
 .play-button{
     position: absolute;
     top: 40%;
@@ -64,15 +60,19 @@
 }
 
 .list-group{
-    max-height: 418px;
-    margin-bottom: 10px;
+    height: 30rem;
     overflow:scroll;
     overflow-x: hidden;
 }
 
+.playlist-item{
+    height: 10rem;
+}
+
 .img-playlist{
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 100px;
+
 }
 
 .plus-button{
@@ -98,9 +98,11 @@
 
 .playlist-info{
   border-width: 1px !important;
+  border-top: transparent !important;
   border-color: #6A6969  !important;
   background: linear-gradient(to top, #bdbdbd 45%, #DCDCDC 95%);
 }
+
 
 
 .link-black{
