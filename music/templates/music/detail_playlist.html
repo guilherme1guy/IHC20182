@@ -14,6 +14,9 @@
   <link href="{% static 'music/css/detail_music.css' %}" rel="stylesheet">
   <link href="{% static 'music/css/detail_album.css' %}" rel="stylesheet">
   <link href="{% static 'music/css/detail_playlist.css' %}" rel="stylesheet">
+
+  
+  <link href="{% static 'dashboard/css/feed.css' %}" rel="stylesheet">
 {% endblock css%}
 
 {% block content %}
@@ -54,6 +57,51 @@
     <li><a class="track" href="#">Charade (Exploring The Surface) feat. Julie Thurman</a> <span class="time">3:04</span></li>
     <li><a class="track" href="#">Speed of Sound (An Interruption In Spaceflight)</a> <span class="time">5:05</span></li>
   </ol>
+
+
+    <div class="row align-items-center justify-content-center">
+      <div class="col-7">
+
+    <div class="card my-1 content-card">
+      <div class="card-header pt-1 pb-0 content-card-header">
+
+        <div class="row">
+          <div class="col-auto pt-1">
+            <img src="{% static 'core/img/user11.png' %}" class="img-circle small-profile-img">
+          </div>
+          <div class="col">
+            <p class="black-text font-weight-bold row my-0"> Xacrinha Xiscrane </p>
+            <p class="black-text font-weight-light font-italic row my-0">14 de maio de 2019</p>
+          </div>
+        </div>
+      
+      </div>
+
+    <div class="card-body content-card-body">
+
+        <div class="row px-2">
+        <p class="black-text card-text">Aí, amei. Que top!</p>
+        </div>
+
+
+      </div>
+
+      <div class="card-footer text-muted content-card-footer">
+        <div class="row align-items-center">
+          <div class="col">
+
+            {% include "dashboard/content_footer.html" with content_piece=content_piece%}
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
 {% endblock content%}
 
 {% block js %}

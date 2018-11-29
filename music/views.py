@@ -1,5 +1,5 @@
 from django.views.generic.base import TemplateView
-
+from dashboard.views import FeedView
 
 class MyMusicView(TemplateView):
     template_name = "music/my_music.html"

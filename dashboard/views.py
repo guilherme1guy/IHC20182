@@ -236,6 +236,23 @@ class FeedView(TemplateView):
 
         return menssages
 
+    @staticmethod
+    def get_only_text():
+        content_list = []
+
+        for i in range(3, 10):
+
+            content_piece = {
+                'author': FeedView.get_name(),
+                'author_img': FeedView.get_img(),
+                'menssage': FeedView.get_mensage(),
+                'date_time': "26 de Abril de 2018 às 16:00h",
+                'content_type': 'txt',
+                'number_likes' : randint(0,101),
+                'comments': FeedView.get_comments()
+            }
+
+
     def get_random_content(self):
         content_list = []
 
