@@ -1,0 +1,85 @@
+<div class="chat-container">
+            
+    <div class="chat-window rounded-top">
+
+        <button  class="btn chat-window-header m-0 p-0" data-toggle="collapse" href="#chatListBody" role="button"> 
+            <p class="black-text">Chat</p>
+        </button >
+
+        <ul id="chatListBody" class="collapse list-group chat-list">
+
+            {% for friend in view.get_chat_friends %}
+                <a href"#" class="list-group-item chat-item" onclick='$(chatMessage).removeClass("hidden"); $(msgBox).removeClass("no-display")'>
+                    <div class="row align-items-center">
+                        <div class="col-auto pt-1">
+                            <img src="{{ view.get_img }}" class="img-circle chat-img">
+                        </div>
+                        <div class="col">
+                            <p class="black-text font-weight-bold row my-0"> {{ view.get_name }} </p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+            <div id="chatMessage" class="chat-message rounded-top hidden">
+
+                <button  class="btn chat-window-header m-0 p-0" href="#" onclick='$(chatMessage).addClass("hidden"); $(msgBox).addClass("no-display")'> 
+                    <p class="black-text">Voltar</p>
+                </button >
+
+                <div class="col">
+                
+                    {% for chat_menssage in view.get_chat_conversation %}
+                        <div class="row py-1">
+
+                            {% if chat_menssage.author.type == "sender" %}
+                            <div class="col chat-sent-menssage mx-2 rounded">
+                                <div class="row"> <!-- start row -->
+                            {% else %}
+                            <div class="col chat-received-menssage mx-2 rounded">
+                                <div class="row"> <!-- start row -->
+                                    <div class="col-auto pt-1 pr-0">
+                                        <img src="{{ chat_menssage.author.img }}" class="img-circle chat-img">
+                                    </div>
+                            {% endif %}
+                            
+                                    <p class="col mx-1 black-text">
+                                        {{chat_menssage.menssage}}
+                                    </p>
+
+                                    {% if chat_menssage.author.type == "sender" %}
+
+                                        <div class="col-auto pt-1 pl-0">
+                                            <img src="{{ chat_menssage.author.img }}" class="img-circle chat-img">
+                                        </div>
+
+                                    {% endif %}
+
+                                </div> <!-- end row -->
+                            </div>
+                    
+                        </div>
+                    
+                    {% endfor %}
+                    
+                </div>
+
+            </div>
+
+        </ul>
+
+        <div id="msgBox" class="no-display chat-window-message-box m-0 p-0">
+
+            <div class="input-group">
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-post-comment"><i class="fas fa-comments black-icon"></i></button>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    
+
+</div>
