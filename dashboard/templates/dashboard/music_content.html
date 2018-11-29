@@ -1,11 +1,16 @@
+{% load static %}
+<script type="text/javascript" src="{% static 'dashboard/js/feed.js' %}"></script>
+<audio id="myAudio">
+        <source src="http://www.music.helsinki.fi/tmt/opetus/uusmedia/esim/a2002011001-e02.wav" type="audio/wav">
+        Your browser does not support the audio element.
+</audio>
  <div class="panel-body">
     <li class="list-group-item">
     <div class="row px-2 pt-1 align-items-center music-item">
-        <a class="album-img col" href="" onclick=abc(this) class="slider_info">
-            <i class="fas fa-play fa-3x play-button"></i>
+        <a class="album-img col" href="#" onclick=playAudio(this) class="slider_info">
+            <i id="play" class="fas fa-play fa-3x play-button"></i>
             <img class="img-fluid img-thumbnail" src={{content_piece.music.music_image_link}}>
         </a>
-
         <div class="col">
             {{content_piece.music.music_name}}
             <br>
