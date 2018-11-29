@@ -41,18 +41,35 @@
       <div class="col-6">
 
         <!-- feed section -->
+        <div class="row my-2">
+          <div class="col">
+
+            <div class="card my-1 content-card">
+              <div class="card-body content-card-body">
+                <textarea rows="4" cols="84" placeholder="O que deseja postar?"></textarea>
+              </div>
+              <div class="card-footer text-muted content-card-footer">
+                <div class="row align-items-center float-right">
+                  <div class="col">
+                    <button class="font-weight-bold btn playlist-button">📎</button>
+                    <button class="font-weight-bold btn playlist-button">Compartilhar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
         {% for content_piece in content  %}
 
-          <div class="row my-2">
-            <div class="col">
+
 
               {% include "dashboard/content_piece.html" with content_piece=content_piece %}
 
-            </div>
-          </div>
+
 
         {% endfor %}
+
+          </div>
+        </div>
 
       </div>
 

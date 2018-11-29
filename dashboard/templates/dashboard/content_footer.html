@@ -14,7 +14,7 @@
 
 {% for comment in content_piece.comments %}
 
-    <div class="row mt-2">
+    <div class="row mt-2 ">
 
         <div class="col-auto pt-1 px-0 mx-1">
             <img src="{{ comment.img }}" class="img-circle small-profile-img">
@@ -22,12 +22,12 @@
 
         <div class="col">
 
-            <div class="row comment-box rounded">
-        
+            <div class="row comment-box background-borded rounded">
+
                 <div class="col mx-1">
                     <p class="row my-0 black-text"> {{ comment.text }} </p>
                 </div>
-        
+
                 <div class="w-100" ></div>
 
                 <div class="col"></div>
@@ -36,13 +36,12 @@
                 </div>
 
             </div>
-        
+
         </div>
-        
-    
+
+
 
     </div>
 
 
 {% endfor %}
-

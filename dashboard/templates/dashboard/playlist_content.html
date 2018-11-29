@@ -37,14 +37,14 @@
     </div>
 
     <div class="row playlist-info border rounded-bottom justify-content-between">
-        <div class="col py-2 font-weight-bold ">
+        <div class="col py-2 margin-little-top font-weight-bold ">
             Playlist: {{view.get_name_playlist}}
         </div>
-        <div class="col py-2 font-weight-bold">
+        <div class="col py-2 margin-little-top font-weight-bold">
             Autor: {{view.get_name}}
         </div>
         <div class="col py-2">
-            <button class="font-weight-bold btn playlist-button">Ir para playlist</button>
+            <a href="{% url 'music:detail_playlist' %}"><button class="float-right font-weight-bold btn playlist-button">Ir para playlist</button></a>
         </div>
     </div>
     </div>

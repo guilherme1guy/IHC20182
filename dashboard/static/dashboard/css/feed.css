@@ -163,3 +163,15 @@
 .label-ver-mais:hover{
   color: lightgray !important;
 }
+
+.background-borded{
+  border-width: 5px !important;
+}
+
+.margin-little-top{
+  margin-top: 6px !important;
+}
+
+.button-new-post{
+  background-color: white !important;
+}
