@@ -218,3 +218,7 @@ overflow: hidden;
 .notification-item {
   min-height: 50px;
 }
+
+.search {
+  width: 15px !important;
+}
