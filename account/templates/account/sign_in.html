@@ -55,13 +55,13 @@
 
         <div class="navbar-nav ml-auto">
             <li class="nav-item mr-5">
-            <a class="nav-link" href=""><ins>Entrar</ins></a>
+            <a class="nav-link" href="{% url 'account:sign_in' %}"><ins>Entrar</ins></a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link" href=""><ins>Cadastrar</ins></a>
+                <a class="nav-link" href="{% url 'account:sign_up' %}"><ins>Cadastrar</ins></a>
             </li>
             <li class="nav-item mr-5">
-                <a class="nav-link"><ins>Ajuda?</ins></a>
+                <a class="nav-link" href="{% url 'account:help_page' %}"><ins>Ajuda?</ins></a>
             </li>
         </div>
 
@@ -81,10 +81,10 @@
                     </div>
                     <div class="row mb-5 ml-3">
                         <div class="col">
-                            <button type="button" class="btn btn-danger"><i class="fab fa-google-plus fa-lg"></i> Google</button>
+                            <a href="{% url 'dashboard:feed' %}"><button type="button" class="btn btn-danger"><i class="fab fa-google-plus fa-lg"></i> Google</button></a>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-primary"><i class="fab fa-facebook-square fa-lg"></i> Facebook</button>
+                          <a href="{% url 'dashboard:feed' %}"><button type="button" class="btn btn-primary"><i class="fab fa-facebook-square fa-lg"></i> Facebook</button></a>
                         </div>
                     </div>
                     <form>
@@ -96,7 +96,9 @@
                             <label for="Password">Senha</label>
                             <input type="password" class="form-control" id="Password">
                         </div>
-                        <button type="submit" class="btn btn-dark float-right mb-5">Entrar</button>
+                        <div>
+                          <a href="{% url 'dashboard:feed' %}"><button type="submit" class="btn btn-dark float-right mb-5">Entrar</button></a>
+                        </div>
                     </form>
             </div>
         </div>
