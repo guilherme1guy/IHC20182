@@ -3,7 +3,7 @@
     <div class="col mx-2">
     <div class="row">
         <ul class="list-group col pb-0 mb-0">
-            
+
             {% for music_playlist in content_piece.playlist %}
             <li class="list-group-item playlist-item">
 
@@ -23,10 +23,10 @@
                             {{music_playlist.music_author}} - {{music_playlist.music_album}}
                         </p>
                     </div>
-                    
+
                     <div class="col-auto">
-                        <button class="fas fa-plus-circle plus-button fa-2x"></button>
-                        <button class="fas fa-external-link-square-alt info-button fa-2x"></button>
+                      <a href="{% url 'music:my_music' %}"><button class="fas fa-plus-circle plus-button fa-2x"></button></a>
+                      <a href="{% url 'music:detail_music'%}"><button class="fas fa-external-link-square-alt info-button fa-2x"></button></a>
                     </div>
                 </div>
 
