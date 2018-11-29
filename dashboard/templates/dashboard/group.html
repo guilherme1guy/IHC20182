@@ -41,9 +41,11 @@
       <div class="col-6">
 
         <!-- feed section -->
+
+        <label class="label-ver-mais"><font size="8"> Rockeiros da FGA </font> </label>
+
         <div class="row my-2">
           <div class="col">
-
             <div class="card my-1 content-card">
               <div class="card-body content-card-body">
                 <textarea rows="4" cols="84" placeholder="O que deseja postar?"></textarea>
@@ -60,11 +62,7 @@
 
         {% for content_piece in content  %}
 
-
-
               {% include "dashboard/content_piece.html" with content_piece=content_piece %}
-
-
 
         {% endfor %}
 
@@ -76,8 +74,6 @@
       <div class="col">
 
         <!-- right panel -->
-
-        {% include "dashboard/chat.html" %}
 
 
       </div>
