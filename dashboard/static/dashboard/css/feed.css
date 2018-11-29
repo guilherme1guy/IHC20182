@@ -55,7 +55,7 @@
     background: #bdbdbd;
 }
 
-.list-group{
+.playlist-list-group{
     height: 30rem;
 
     overflow:scroll;
@@ -123,4 +123,121 @@
 .black-text{
     color: black !important;
 
+}
+
+.chat-container{
+
+    position: fixed;
+
+    bottom: 0%;
+    right: 0%;
+
+    width: 25%;
+}
+
+.chat-window{
+
+    background-color: white;
+
+}
+
+.chat-window-header{
+
+    width: 100% !important;
+    height: 2rem !important;
+
+    background: linear-gradient(to top, #bdbdbd 45%, #DCDCDC 95%);
+    margin: 0%;
+
+    margin-bottom: 0rem !important;
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+
+    position: sticky;
+
+    z-index: 100;
+
+    top: 0%;
+    left: 0%;
+}
+
+.chat-window-message-box{
+
+    background-color: white;
+
+    width: 100% !important;
+    height: 2rem !important;
+
+    position: sticky;
+
+    z-index: 100;
+
+    top: 100%;
+    left: 0%;
+}
+
+.chat-list{
+
+    height: 25rem;
+
+    overflow:scroll;
+    overflow-x: hidden;
+
+}
+
+.chat-item{
+
+    height: 4rem;
+    
+    color: #b2b2b2 !important;
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+    width: 100% !important;
+    text-align: unset !important;
+
+}
+
+.chat-img{
+
+    height: 2rem;
+    width: auto;
+
+}
+
+.chat-message{
+    position: absolute;
+
+    bottom: 10%;
+    right: 0%;
+
+    height: 90%;
+    width: 100%;
+
+    background-color: white;
+
+    
+    overflow:scroll;
+    overflow-x: hidden;
+}
+
+.chat-received-menssage{
+    background-color: #ebebeb;
+
+    width: 85%;
+
+}
+
+.chat-sent-menssage{
+    background-color: #c5c5c5;
+
+    width: 85%;
+}
+
+.hidden {
+
+    visibility: hidden;
+}
+
+.no-display{
+    display: none;
 }
