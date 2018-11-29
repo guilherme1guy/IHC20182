@@ -124,3 +124,54 @@
     color: black !important;
 
 }
+
+.black-background{
+  background-color: darkred !important;
+  color: white !important;
+}
+
+.gray-background{
+  background-color: #333333 !important;
+  color: white !important;
+}
+
+.list-size{
+  width: 100% !important;
+}
+
+.list-size:hover{
+  color: lightgray !important;
+}
+
+.list-size-top{
+  width: 100% !important;
+  margin-top: 7px !important;
+  overflow-y: auto !important;
+}
+
+.without-space{
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.label-ver-mais{
+  color: white !important;
+  text-align: center !important;
+  margin-top: 3px !important;
+}
+
+.label-ver-mais:hover{
+  color: lightgray !important;
+}
+
+.background-borded{
+  border-width: 5px !important;
+}
+
+.margin-little-top{
+  margin-top: 6px !important;
+}
+
+.button-new-post{
+  background-color: white !important;
+}
