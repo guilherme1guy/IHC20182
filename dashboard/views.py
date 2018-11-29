@@ -392,6 +392,67 @@ class GroupView(TemplateView):
     def get_playlist(size):
         return sample(FeedView.musics, size)
 
+    @staticmethod
+    def get_chat_friends():
+
+        size = randint(2,10)
+        friends = []
+
+        for i in range(0, size):
+            friends.append(
+                {
+                    'img': FeedView.get_img(),
+                    'name': FeedView.get_name()
+                }
+            )
+
+        return friends
+
+    
+    @staticmethod
+    def get_chat_conversation():
+
+        size = randint(1,4)
+        menssages = []
+
+        persons = [
+            {
+                'img': FeedView.get_img(),
+                'type': 'sender'
+            },
+            {
+                'img': FeedView.get_img(),
+                'type': 'receiver'
+            }
+        ]
+
+        for i in range(0, size):
+        
+            menssages.append(
+                {
+                    'menssage': FeedView.get_mensage(),
+                    'author': choice(persons)
+                }
+            )
+          
+
+        menssages.append(
+            {
+                'author': persons[0],
+                'menssage': FeedView.get_mensage()
+            }
+        )
+        
+        menssages.append(
+            {
+                'author': persons[1],
+                'menssage': FeedView.get_mensage()
+            }
+        )
+
+        return menssages
+
+
     def get_random_content(self):
         content_list = []
 
