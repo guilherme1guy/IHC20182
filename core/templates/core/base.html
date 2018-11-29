@@ -77,7 +77,18 @@
         </div>
       </div>
 
-      <i class=" fas fa-chevron-down mr-5"></i>
+      <div class="dropdown show">
+        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class=" fas fa-chevron-down mr-5"></i>
+        </a>
+
+        <div class="dropdown-menu player-drop" aria-labelledby="dropdownMenuLink">
+          <img class="img-fluid card-img-top" src="https://images.genius.com/565381daa3a7d73a551d9738732b26d5.1000x1000x1.jpg">
+          <p>Starboy<br>The Weeknd</p>
+          <i class="fas fa-random"></i>
+          <i class="fas fa-redo-alt"></i>
+        </div>
+      </div>
 
       <a class="search" href="{% url 'search:first_page_search' %}"><i class="fas fa-search"></i></a>
 

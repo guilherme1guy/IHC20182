@@ -222,3 +222,20 @@ overflow: hidden;
 .search {
   width: 50px !important;
 }
+
+.player-drop img {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.player-drop p {
+    color: black !important;
+    text-align: center;
+    font-style: italic;
+}
+
+.player-drop i {
+    color: black !important;
+    margin-left: 25%;
+    margin-bottom: 10px;
+}
